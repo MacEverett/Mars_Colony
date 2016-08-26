@@ -1,0 +1,38 @@
+.report-container {
+  display: flex;
+  flex-direction: column;
+  background: url('http://www.leonarddavid.com/wp-content/uploads/2015/11/EXPLORE-MARS-photodune-10070933-phobos-with-the-red-planet-mars-in-the-background-l.jpg');
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+
+}
+.styled-select select {
+   color: red;
+   background: black;
+   width: 268px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: red 2px solid;
+   border-radius: 0;
+   height: 40px;
+   text-transform: uppercase;
+   -webkit-appearance: none;
+   }
+
+ul {
+  list-style-type: none;
+}
+
+ul li input{
+    background-color: black;
+    width: 254px;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1;
+    border: red 2px solid;
+    height: 34px;
+    margin-right: 35px;
+    color: red;
+}

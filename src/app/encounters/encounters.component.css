@@ -1,0 +1,51 @@
+.encounters-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  border: black 10px solid;
+  background: url('http://blue-jay.co.uk/wp-content/uploads/2015/04/Top-banner-1.jpg');
+}
+
+.encounters-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 10px black solid;
+  width: 99%;
+  background: url('http://blue-jay.co.uk/wp-content/uploads/2015/04/Top-banner-1.jpg');
+  font-size: 1.4rem;
+}
+
+.encounters-header h1 {
+ text-transform: uppercase;
+ font-family: "IMPACT";
+}
+
+
+/*encounter*/
+	fieldset {
+		font-family: 'IMPACT';
+		padding: 0;
+		margin: 0;
+		border: none;
+		width: 99%;
+		display: flex;
+		flex-flow: column nowrap;
+	}
+
+	.encounter-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+    background: url('http://blue-jay.co.uk/wp-content/uploads/2015/04/Top-banner-1.jpg');
+    border: black 10px solid;
+	}
+
+	.encounter-button {
+		width: 100%;
+		padding: 30px;
+		border: black 2px solid;
+		font-size: 2rem;
+		color: black;
+		background-color: : #b22e20;
+	}

@@ -1,0 +1,47 @@
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  font: normal 18px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
+  background-image: url('http://wallpapercave.com/wp/P9FLCIw.jpg');
+  height: 100vh;
+  align-items: center;
+}
+
+.container h1 {
+  color: black;
+  font-size: 60px;
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  border: none;
+
+}
+
+.form-container input {
+  height: 50px;
+  width: 400px;
+  padding: 20px;
+
+}
+
+.form-container select {
+  height: 50px;
+  width: 400px;
+
+}
+
+.form-container button {
+  width: 444px;
+  text-transform: capitalize;
+  color: white;
+  background-color: black;
+  }

@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Register</h1>
+<form (ngSubmit)="onSubmit()" #arrivalForm="ngForm" class="form-container" name="arrival-form">
+    <fieldset>
+        <input [(ngModel)]="colonist.name" name="name" type="text" placeholder="Name" required>
+        <input [(ngModel)]="colonist.age"  name="age" type="number" placeholder="Age" required>
+        <div class="custom-select">
+            <select [(ngModel)] = "colonist.job_id" name="job_id" required>
+                <option value="(none)">Select an Occupation </option>
+                <option *ngFor="let o of occupation" [value]="o.id">{{o.name}}</option>
+            </select>
+        </div>
+    </fieldset>
+    <fieldset>
+            <button [disabled]="noOccupation || !arrivalForm.form.valid" type="submit">Submit</button>
+    </fieldset>
+</form>
+<div>
