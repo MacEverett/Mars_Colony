@@ -15,8 +15,10 @@ export class ArrivalComponent {
 
 NO_OCCUPATION_SELECTED = '(none)';
 
+private errorMessage: string;
 public occupation: IOccupation [];
 public colonist: Colonists;
+
 
 constructor(
   private router: Router,
@@ -31,13 +33,15 @@ constructor(
      return this.colonist.job_id === this.NO_OCCUPATION_SELECTED;
    }
 
-   onSumbit() {
-     this.colonistService.newColonists(this.colonist).then(colonist =>{
-       this.router.navigate(['/encounters']);
-     }).catch(error => {
-       //TODO: Handle Error
-     });
-   }
+   onSubmit() {
+   this.colonistService.newColonists(this.colonist)
+   .then(colonist => {
+     sessionStorage.setItem('colonist', colonist.job_id);
+     this.router.navigate(['/encounters']);
+   }).catch(error =>{
+     this.errorMessage="Oops, something went wrong! ";
+   });
+ }
 }
 
 /* updateColonist(){

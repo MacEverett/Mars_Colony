@@ -5,7 +5,15 @@
   border: black 10px solid;
   background: url('http://blue-jay.co.uk/wp-content/uploads/2015/04/Top-banner-1.jpg');
 }
-
+.encounter-reports{
+  width: 90vw;
+  height: 50vh;
+  overflow: scroll;
+  margin: 30px;
+  margin-left:0;
+  font-size: 18px;
+  line-height: 1.2;
+}
 .encounters-header {
   display: flex;
   flex-direction: column;

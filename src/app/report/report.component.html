@@ -1,18 +1,10 @@
-<div class="report-container">
-       <div class="styled-select">
-        <select>
-             <option value="scary-alien">Scary Alien</option>
-             <option value="sleepy-alien">Sleepy Alien</option>
-             <option value="dopy-alien">Dopy Alien</option>
-             <option value="grumpy-alien">Grumpy Alien</option>
-             <option value="hungry-alien">Hungry Alien</option>
-        </select>
-      </div>
-      <form>
-        <ul>
-          <li>
-              <input type="textarea" id="report-texarea" placeholder="What Happened? Report Here">
-          </li>
-        </ul>
-      </form>
-</div>
+<section class="report-container">
+  <form class="encounter-form" name="reportForm" (ngSubmit)="onSubmit()" #reportForm="ngForm">
+    <select class ="styled-select" required [(ngModel)]="encounter.atype" name="atype">
+      <option value="(none)">Select an alien type</option>
+      <option *ngFor="let alien of aliens" [value]="aliens.type" >{{alien.type}}</option>
+    </select>
+    <textarea col="200px" placeholder="Action taken" required [(ngModel)]="encounter.action" name="action"></textarea>
+    <button [disabled]="noAlienSelected || !reportForm.form.valid" type="submit">Submit Report</button>
+  </form>
+</section>

@@ -3,11 +3,13 @@
     <h1> Recent Encounters </h1>
     <p> See an Alien? Report it! </p>
   </div>
-</div>
-<div class="encounter-container">
-<form action="">
-<fieldset>
-  <button class="encounter-button">Report an Encounter</button>
-</fieldset>
-</form>
+<section class="encounter-reports">
+    <div class="list-reports" *ngFor="let encounter of encounters">
+      <p class="date-alien">{{encounter.date}} - {{encounter.atype}}</p>
+      <p class="action">{{encounter.action}}</p>
+    </div>
+  </section>
+  <section>
+     <button class="encounter-button" [routerLink]="['/report']">Report an Encounter</button>
+  </section>
 </div>
